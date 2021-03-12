@@ -45,7 +45,7 @@ public class Sqrt {
 		return 1;
 	}
 	
-	public static int mySqrtDumb(int x) {
+	public static int sqrtDumb(int x) {
 		// sqrt is required to be integer
 		int sqrt = x;
 
