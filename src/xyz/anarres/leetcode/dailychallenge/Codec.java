@@ -1,4 +1,4 @@
-package xyz.anarres.leetcode.march;
+package xyz.anarres.leetcode.dailychallenge;
 
 import java.util.TreeMap;
 
