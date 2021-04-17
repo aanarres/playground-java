@@ -33,7 +33,7 @@ class PhoneLettersTest {
 		String[] exp3 = {"a","b","c"};
 		assertEquals(exp3.length, result3.size());
 		for (String expected:exp3) {
-			assertTrue(result.contains(expected));
+			assertTrue(result3.contains(expected));
 		}
 	}
 }

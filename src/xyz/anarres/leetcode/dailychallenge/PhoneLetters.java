@@ -1,6 +1,7 @@
 package xyz.anarres.leetcode.dailychallenge;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class PhoneLetters {
 		if (digits.length() < 1)
 			return combos;
 		
-		String[][] letters = {{}, {}, {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j","k","l"}, {"m","n","o"},{"p","q","r","s"},{"t","u","v"},{"x","y","z"}};
+		String[][] letters = {{}, {}, {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j","k","l"}, {"m","n","o"},{"p","q","r","s"},{"t","u","v"},{"w", "x","y","z"}};
 		
 		for(int i=0; i < digits.length(); i++) {
 			int digit = Integer.parseUnsignedInt(digits.substring(i,i+1));
@@ -32,13 +33,14 @@ public class PhoneLetters {
 			}
 			
 			ArrayList<String>newcombos = new ArrayList<>();
-			for (int j=0; j<letters[digit].length; i++) {
+			for (int j=0; j<letters[digit].length; j++) {
 				// add this letter to a replica of the current contents
 					for (String string : combos) {
 						newcombos.add(string + letters[digit][j]);
 				}
 			}
-			combos = newcombos;
+			combos.removeAll(combos);
+			combos.addAll(newcombos);
 		}
 		
 		return combos;
