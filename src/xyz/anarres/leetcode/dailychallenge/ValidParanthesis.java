@@ -17,7 +17,7 @@ public class ValidParanthesis {
 		int k = 0;
 		while (k < s.length() - 1) {
 			// we're starting here, a closed ) is not valid
-			if (s.substring(k, k+1).equals(")")) {
+			if (s.charAt(k) == ')') {
 				k++;
 				continue;
 			}
@@ -25,7 +25,7 @@ public class ValidParanthesis {
 			int count = 0;
 			int open = 0;
 			for (int i=k; i<s.length();i++) {
-				if (s.substring(i, i+1).equals("("))
+				if (s.charAt(i) == '(')
 					open++;
 				else
 					open--;
